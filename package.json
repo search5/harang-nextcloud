@@ -1,7 +1,7 @@
 {
 	"name": "harang-nextcloud",
-	"version": "0.0.1",
-	"description": "Paste Nextcloud internal links into Obsidian and render them as rich file blocks.",
+	"version": "0.0.2",
+	"description": "Plaste Nextcloud internal links into Obsidian and render them as rich file blocks.",
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
