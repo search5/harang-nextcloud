@@ -1,0 +1,67 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Ji-Ho Lee
+# This file is distributed under the same license as the harang-nextcloud
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: harang-nextcloud 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-31 00:07+0900\n"
+"PO-Revision-Date: 2026-07-31 00:00+0900\n"
+"Last-Translator: Ji-Ho Lee\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../index.rst:16
+msgid "Contents"
+msgstr "목차"
+
+#: ../../index.rst:2 af5c4de31bf94d9aa72d8fa42ffe541a
+msgid "harang-nextcloud documentation"
+msgstr "harang-nextcloud 문서"
+
+#: ../../index.rst:4 92ae986676174c8587c3656a7d968afc
+msgid ""
+"An `Obsidian <https://obsidian.md>`_ plugin that turns pasted Nextcloud "
+"internal links into rich file blocks — showing file size, upload date, "
+"and a one-click shortcut to open the file in your browser — right inside "
+"your notes."
+msgstr ""
+"Nextcloud 내부 링크를 붙여넣으면 파일 크기, 업로드 날짜, 브라우저에서 "
+"파일을 바로 열 수 있는 바로가기까지 보여주는 서식 있는 블록으로 바꿔주는 "
+"`Obsidian <https://obsidian.md>`_ 플러그인입니다."
+
+#: ../../index.rst:9 5f536f2763154efe800b419a0b6ebe7c
+msgid ""
+"Paste a Nextcloud internal link (e.g. "
+"``https://cloud.example.com/f/12345``) into a note and it is replaced "
+"with a ``nextcloud-file`` code block that renders as a small card with "
+"the file's name, path, size, date, and an **Open in browser** button. You"
+" can also drop non-image files straight into a note with a ``nc-folder`` "
+"frontmatter property set, and they are uploaded to that Nextcloud folder "
+"automatically."
+msgstr ""
+"Nextcloud 내부 링크(예: ``https://cloud.example.com/f/12345``)를 노트에 "
+"붙여넣으면 파일 이름, 경로, 크기, 날짜와 **브라우저에서 열기** 버튼을 "
+"보여주는 작은 카드로 렌더링되는 ``nextcloud-file`` 코드 블록으로 "
+"바뀝니다. ``nc-folder`` 프런트매터 속성이 설정된 노트에 이미지가 아닌 "
+"파일을 바로 붙여넣으면 해당 Nextcloud 폴더로 자동 업로드되기도 합니다."
+
+#: ../../index.rst:27 51ba3859789746989a3baade959e0fe1
+msgid "Indices and tables"
+msgstr "색인과 표"
+
+#: ../../index.rst:29 d7dd55d9b72a47eaa6d7ffe42dd4bab0
+msgid ":ref:`genindex`"
+msgstr ":ref:`genindex`"
+
+#: ../../index.rst:30 4cedfe76e91e47c8aacf0cb5e61d4bcf
+msgid ":ref:`search`"
+msgstr ":ref:`search`"

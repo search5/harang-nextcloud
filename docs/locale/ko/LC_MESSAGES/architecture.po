@@ -1,0 +1,333 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Ji-Ho Lee
+# This file is distributed under the same license as the harang-nextcloud
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: harang-nextcloud 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-31 00:07+0900\n"
+"PO-Revision-Date: 2026-07-31 00:00+0900\n"
+"Last-Translator: Ji-Ho Lee\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../architecture.rst:2 e05ee37316ad485394e14bca29c80fb6
+msgid "Architecture"
+msgstr "아키텍처"
+
+#: ../../architecture.rst:5 6f5cf3ef2c784686b94fc52121fec327
+msgid "Source layout"
+msgstr "소스 구조"
+
+#: ../../architecture.rst:7 af72a9baadb5411f9d20e339ecf31263
+msgid "All of the plugin's logic lives under ``src/``:"
+msgstr "플러그인의 모든 로직은 ``src/`` 아래에 있습니다:"
+
+#: ../../architecture.rst:13 d5aa8f134ed64f4ca4607aa155d115be
+msgid "File"
+msgstr "파일"
+
+#: ../../architecture.rst:14 e3f6214e86074662bb3f58ad956a3778
+msgid "Responsibility"
+msgstr "역할"
+
+#: ../../architecture.rst:15 d269ddcf5e404d11b13302d0a36e97d6
+msgid "``main.ts``"
+msgstr "``main.ts``"
+
+#: ../../architecture.rst:16 693fae62a07c430a99822a25ca984261
+msgid ""
+"Plugin entry point: loads settings, wires up the settings tab, the code "
+"block processor, paste handler, attachment upload handler, and link "
+"tracker; adds the **Convert selected Nextcloud internal link to a file "
+"block** command."
+msgstr ""
+"플러그인 진입점: 설정을 불러오고 설정 탭, 코드 블록 프로세서, 붙여넣기 핸들러, "
+"첨부 파일 업로드 핸들러, 링크 트래커를 연결합니다. **Convert selected "
+"Nextcloud internal link to a file block** 명령도 추가합니다."
+
+#: ../../architecture.rst:20 84cdf13a1b574a8c94d1e23384643dc6
+msgid "``types.ts``"
+msgstr "``types.ts``"
+
+#: ../../architecture.rst:21 228671156c7246f5a984bec863a56d00
+msgid ""
+"Shared types: ``NextcloudProfile``, ``HarangNextcloudSettings``, "
+"``NextcloudFileMeta``."
+msgstr ""
+"공유 타입: ``NextcloudProfile``, ``HarangNextcloudSettings``, "
+"``NextcloudFileMeta``."
+
+#: ../../architecture.rst:23 d6ce58d21ac34c70af65b79d1d7039b9
+msgid "``settings.ts``"
+msgstr "``settings.ts``"
+
+#: ../../architecture.rst:24 b62a572ada1b4b07a4dc15c9f5a98e3b
+msgid ""
+"The settings tab: profile list, the \"Add new profile\" form, and the "
+"Login Flow v2 handshake (start / poll / cancel) for both new and "
+"reconnected profiles."
+msgstr ""
+"설정 탭: 프로필 목록, \"새 프로필 추가\" 폼, 그리고 신규/재연결 프로필 모두에 "
+"대한 Login Flow v2 핸드셰이크(시작/폴링/취소)."
+
+#: ../../architecture.rst:27 3020a6ea5ded48f095310c5d470516de
+msgid "``i18n/``"
+msgstr "``i18n/``"
+
+#: ../../architecture.rst:28 f0de248c4ef84e47a8dc3a5e1386cf8e
+#, python-brace-format
+msgid ""
+"Looks up the current Obsidian UI language via the official "
+"``getLanguage()`` API and returns matching strings from ``en.ts``/ "
+"``ko.ts`` (falling back to English). ``t(key, params)`` does "
+"``{placeholder}`` substitution for messages that embed values like an "
+"HTTP status or filename."
+msgstr ""
+"공식 ``getLanguage()`` API로 현재 Obsidian UI 언어를 확인하고 ``en.ts``/"
+"``ko.ts``에서 일치하는 문자열을 반환합니다(없으면 영어로 대체). "
+"``t(key, params)``는 HTTP 상태나 파일명 같은 값을 포함하는 메시지에 대해 "
+"``{placeholder}`` 치환을 수행합니다."
+
+#: ../../architecture.rst:33 e5cbc1b8ffdc4dd28d0119b34068ae21
+msgid "``nextcloud/loginFlow.ts``"
+msgstr "``nextcloud/loginFlow.ts``"
+
+#: ../../architecture.rst:34 596dd66de6694699886c33ab0080bd87
+msgid ""
+"Implements Nextcloud's `Login Flow v2 "
+"<https://docs.nextcloud.com/server/latest/developer_manual/client_apis/LoginFlow/index.html>`_:"
+" ``initiateLoginFlow`` starts the handshake and returns a browser login "
+"URL, ``pollLoginFlow`` polls until the user finishes authenticating (or "
+"the ~20 minute token expires, or the user cancels) and returns the "
+"resulting server URL, login name, and app password."
+msgstr ""
+"Nextcloud의 `Login Flow v2 "
+"<https://docs.nextcloud.com/server/latest/developer_manual/client_apis/LoginFlow/index.html>`_"
+"\\ 를 구현합니다: ``initiateLoginFlow``\\ 가 핸드셰이크를 시작해 브라우저 로그인 "
+"URL을 반환하고, ``pollLoginFlow``\\ 는 사용자가 인증을 마칠 때까지(또는 약 20분 "
+"토큰이 만료되거나 사용자가 취소할 때까지) 폴링하며 결과 서버 URL, 로그인명, "
+"앱 비밀번호를 반환합니다."
+
+#: ../../architecture.rst:41 47bab5096fca4bf2938078e72e9a22a9
+msgid "``nextcloud/link.ts``"
+msgstr "``nextcloud/link.ts``"
+
+#: ../../architecture.rst:42 4956c67dbe4349579990f3d8fb00baf4
+msgid ""
+"``parseInternalLink`` recognizes Nextcloud internal link URLs "
+"(``.../f/<fileid>``, with or without ``index.php``) and extracts the base"
+" URL and file id. ``findProfileForLink`` matches a parsed link back to a "
+"configured profile (exact server URL match, falling back to a host-only "
+"comparison). ``resolveUploadTarget`` parses an ``nc-folder`` frontmatter "
+"value (``ProfileName/path``, or just ``path`` when exactly one profile is"
+" registered) into a profile and destination folder."
+msgstr ""
+"``parseInternalLink``\\ 은 Nextcloud 내부 링크 URL(``index.php`` 포함 여부와 "
+"무관하게 ``.../f/<fileid>`` 형태)을 인식해 기본 URL과 파일 id를 추출합니다. "
+"``findProfileForLink``\\ 는 파싱된 링크를 설정된 프로필과 매칭합니다(정확한 서버 "
+"URL 일치, 실패 시 호스트만 비교). ``resolveUploadTarget``\\ 은 ``nc-folder`` "
+"프런트매터 값(``프로필이름/경로``, 또는 프로필이 정확히 하나만 등록된 경우 "
+"``경로``\\ 만)을 프로필과 대상 폴더로 파싱합니다."
+
+#: ../../architecture.rst:50 c7d89d94271b4a8a9b71a75e35d8c673
+msgid "``nextcloud/client.ts``"
+msgstr "``nextcloud/client.ts``"
+
+#: ../../architecture.rst:51 f57d2398cb18467f9a6e1c29deb8c625
+msgid ""
+"A WebDAV client for the parts of the Nextcloud API the plugin needs, all "
+"over Obsidian's ``requestUrl``: ``fetchFileMeta`` (WebDAV ``SEARCH`` by "
+"``oc:fileid``, since an internal link only carries the numeric file id, "
+"not a path), ``fetchFileMetaByPath`` (``PROPFIND``), ``ensureFolder`` "
+"(``MKCOL``, idempotent, creates missing parent folders), "
+"``findAvailableUploadName`` (checks for name collisions before an "
+"upload), ``uploadFile`` (``PUT``), and ``deleteFile`` (``DELETE``, which "
+"Nextcloud treats as \"move to trash\" rather than a permanent delete)."
+msgstr ""
+"플러그인이 필요로 하는 Nextcloud API 부분에 대한 WebDAV 클라이언트로, "
+"모두 Obsidian의 ``requestUrl``\\ 을 통해 동작합니다: ``fetchFileMeta``(내부 "
+"링크에는 경로가 아니라 숫자 파일 id만 담겨 있으므로 ``oc:fileid``\\ 로 WebDAV "
+"``SEARCH``), ``fetchFileMetaByPath``(``PROPFIND``), ``ensureFolder``"
+"(``MKCOL``, 멱등적이며 없는 상위 폴더도 생성), ``findAvailableUploadName``"
+"(업로드 전 이름 충돌 확인), ``uploadFile``(``PUT``), ``deleteFile``"
+"(``DELETE`` — Nextcloud는 이를 완전 삭제가 아니라 \"휴지통으로 이동\"으로 "
+"처리합니다)."
+
+#: ../../architecture.rst:60 f643a5eff85b448a80af79acfea07313
+msgid "``block-view.ts``"
+msgstr "``block-view.ts``"
+
+#: ../../architecture.rst:61 ea5678f7fe04466899d407846d875d6e
+msgid ""
+"Registers the ``nextcloud-file`` code block processor. Parses the block's"
+" link, resolves its profile, fetches (and caches for 60s) the file's "
+"metadata, and renders the info card described in :doc:`usage` — or an "
+"error card with a **Retry** button on failure."
+msgstr ""
+"``nextcloud-file`` 코드 블록 프로세서를 등록합니다. 블록의 링크를 파싱하고, "
+"프로필을 매칭하고, 파일 메타데이터를 가져와(60초 동안 캐시) :doc:`usage`\\ 에서 "
+"설명한 정보 카드를 렌더링합니다 — 실패 시에는 **재시도** 버튼이 있는 오류 "
+"카드를 표시합니다."
+
+#: ../../architecture.rst:66 0f7b37a51dc5427fa66d8113841f60e9
+msgid "``paste-handler.ts``"
+msgstr "``paste-handler.ts``"
+
+#: ../../architecture.rst:67 2524010526fd45cb9aa9f1cb6b9a6a8b
+msgid ""
+"Listens for the editor's paste event; when the pasted plain text is a "
+"recognized Nextcloud internal link, replaces it with a ``nextcloud-file``"
+" code block instead of the raw URL."
+msgstr ""
+"에디터의 붙여넣기 이벤트를 감지합니다. 붙여넣은 일반 텍스트가 인식 가능한 "
+"Nextcloud 내부 링크이면, 원본 URL 대신 ``nextcloud-file`` 코드 블록으로 "
+"바꿉니다."
+
+#: ../../architecture.rst:70 00553bcb8dc840e1b3b717ba8f6e91d1
+msgid "``attachment-upload.ts``"
+msgstr "``attachment-upload.ts``"
+
+#: ../../architecture.rst:71 f809beeaa76b411b86f3a9aac6f87d76
+msgid ""
+"Listens for the same paste event for pasted **files**. Skips images (so "
+"Obsidian's normal image-paste behavior is untouched), requires the active"
+" note to have an ``nc-folder`` frontmatter property, then uploads each "
+"non-image file to that folder and inserts a ``nextcloud-file`` block per "
+"uploaded file."
+msgstr ""
+"같은 붙여넣기 이벤트를 붙여넣은 **파일**\\ 에 대해서도 감지합니다. 이미지는 "
+"건너뛰어(Obsidian의 일반 이미지 붙여넣기 동작을 그대로 유지) 활성 노트에 "
+"``nc-folder`` 프런트매터 속성이 있어야 하며, 이미지가 아닌 각 파일을 해당 "
+"폴더에 업로드하고 업로드된 파일마다 ``nextcloud-file`` 블록을 삽입합니다."
+
+#: ../../architecture.rst:76 203a6a676bc34ababd40bd06644dbca7
+msgid "``link-tracker.ts``"
+msgstr "``link-tracker.ts``"
+
+#: ../../architecture.rst:77 cf20bcd771d546f58ce1b2bd1318b9cb
+msgid ""
+"Tracks each open markdown note's set of ``nextcloud-file`` blocks as a "
+"baseline. When a note is edited or deleted and a block that was "
+"previously there is now gone, prompts (via ``confirm-delete-modal.ts``) "
+"whether the underlying Nextcloud file should be moved to the trash too."
+msgstr ""
+"열려 있는 각 마크다운 노트의 ``nextcloud-file`` 블록 집합을 기준선(baseline)"
+"으로 추적합니다. 노트가 편집되거나 삭제되어 이전에 있던 블록이 사라지면, "
+"(``confirm-delete-modal.ts``\\ 를 통해) 해당 Nextcloud 파일도 휴지통으로 옮길지 "
+"물어봅니다."
+
+#: ../../architecture.rst:82 eeb6747ab3e94096a78446026228aae7
+msgid "``confirm-delete-modal.ts``"
+msgstr "``confirm-delete-modal.ts``"
+
+#: ../../architecture.rst:83 63ac92dc58764b5382b3ab4a29050486
+msgid ""
+"The confirmation modal shown by the link tracker: **Keep on Nextcloud** "
+"or **Move to trash**. Closing it without an explicit choice (Esc / "
+"outside click) defaults to the non-destructive \"keep\" option."
+msgstr ""
+"링크 트래커가 표시하는 확인 모달입니다: **Nextcloud에 유지** 또는 **휴지통으로"
+" 이동**. 명시적인 선택 없이 닫으면(Esc / 바깥 클릭) 파괴적이지 않은 \"유지\" "
+"옵션이 기본으로 적용됩니다."
+
+#: ../../architecture.rst:87 af5f3979b43b41b8b8003203f3418b3f
+msgid "``util.ts``"
+msgstr "``util.ts``"
+
+#: ../../architecture.rst:88 0d6576235bad4a0cbeb185cc86e2dd6a
+msgid ""
+"``errorMessage``: normalizes a caught value (``Error`` or not) to a "
+"display string."
+msgstr ""
+"``errorMessage``: 캐치된 값(``Error``\\ 이든 아니든)을 표시용 문자열로 "
+"정규화합니다."
+
+#: ../../architecture.rst:92 1dc41585c3fc4f208ed85bb149018055
+msgid "Data flow"
+msgstr "데이터 흐름"
+
+#: ../../architecture.rst:114 1f436cdffd9a48a795e3ad1f5952c8ef
+msgid "Reference syntax"
+msgstr "참조 문법"
+
+#: ../../architecture.rst:116 1662a0b24d1d4c91aefee63f1494d9a1
+msgid "A resolved reference is stored as a fenced code block:"
+msgstr "확정된 참조는 펜스 코드 블록으로 저장됩니다:"
+
+#: ../../architecture.rst:124 1e3ef0a939fc4fdfa8a32fc6273f712d
+msgid ""
+"The block's content is the original Nextcloud internal link, unmodified —"
+" there is no separate ID scheme to keep in sync. Re-resolving a block "
+"only needs ``findProfileForLink`` (matching the link's host against a "
+"profile's server URL) and the file id already embedded in the link, so a "
+"block keeps rendering correctly even if the file is renamed or moved on "
+"the server, and continues to work if a profile is deleted and re-added "
+"under the same server URL."
+msgstr ""
+"블록의 내용은 수정되지 않은 원본 Nextcloud 내부 링크입니다 — 별도로 동기화해야 "
+"할 ID 체계가 없습니다. 블록을 다시 확정하는 데는 ``findProfileForLink``\\ (링크의 "
+"호스트를 프로필의 서버 URL과 매칭)와 링크에 이미 담겨 있는 파일 id만 있으면 "
+"되므로, 서버에서 파일 이름이 바뀌거나 이동해도 블록은 계속 올바르게 "
+"렌더링되며, 프로필이 삭제됐다가 같은 서버 URL로 다시 추가되어도 계속 "
+"동작합니다."
+
+#: ../../architecture.rst:132 341829410a8f419b98571ca8a7e3e2c1
+msgid ""
+"Only the numeric Nextcloud file id is stored, not a path — this is why "
+"metadata lookup uses WebDAV ``SEARCH`` (``fetchFileMeta``) rather than a "
+"plain ``PROPFIND`` on a path: the plugin has to ask the server \"what "
+"file has this id\" rather than \"what's at this path,\" since the path "
+"isn't known until the server answers."
+msgstr ""
+"경로가 아니라 숫자 Nextcloud 파일 id만 저장됩니다 — 그래서 메타데이터 조회에 "
+"경로 기반의 단순한 ``PROPFIND`` 대신 WebDAV ``SEARCH``(``fetchFileMeta``)를 "
+"사용합니다: 플러그인은 \"이 경로에 뭐가 있는지\"가 아니라 \"이 id를 가진 "
+"파일이 무엇인지\"를 서버에 물어야 하는데, 경로는 서버가 응답하기 전까지는 알 "
+"수 없기 때문입니다."
+
+#: ../../architecture.rst:139 6ddc5b681b1b4bd6ab241dfafbd91979
+msgid "Date field: \"Created\" vs. \"Modified\""
+msgstr "날짜 필드: \"생성일\" vs. \"수정일\""
+
+#: ../../architecture.rst:141 21e8c74ec4524a25beb19ada955e9caf
+msgid ""
+"The rendered card labels its date either **Created** or **Modified**. "
+"``fetchFileMeta``/``fetchFileMetaByPath`` prefer WebDAV's "
+"``creationdate`` property, but some Nextcloud/storage backends return a "
+"placeholder value there (e.g. the Unix epoch) instead of leaving it "
+"absent. Any ``creationdate`` at or before the year 2000 — well before "
+"Nextcloud existed — is treated as \"not actually known,\" and the card "
+"falls back to ``getlastmodified`` labeled **Modified** instead."
+msgstr ""
+"렌더링된 카드는 날짜를 **생성일** 또는 **수정일**\\ 로 표시합니다. "
+"``fetchFileMeta``/``fetchFileMetaByPath``\\ 는 WebDAV의 ``creationdate`` 속성을 "
+"우선하지만, 일부 Nextcloud/스토리지 백엔드는 이 값을 비워두는 대신 (예: "
+"유닉스 에폭 같은) 자리표시자 값을 반환하기도 합니다. Nextcloud가 존재하기 "
+"훨씬 전인 2000년 이전(포함)의 ``creationdate``\\ 는 \"실제로는 알 수 없음\"으로 "
+"간주되어, 카드는 대신 ``getlastmodified``\\ 를 **수정일**\\ 로 표시합니다."
+
+#: ../../architecture.rst:150 b740a7b2e0394dc794e809730e5edd8d
+msgid "No runtime dependencies"
+msgstr "런타임 의존성 없음"
+
+#: ../../architecture.rst:152 18ee82af81dc488ead54d4bf2e03ff3e
+msgid ""
+"Beyond what Obsidian itself provides (the ``obsidian`` package), the "
+"plugin has no runtime dependencies — the WebDAV client, login flow, and "
+"internal-link parsing are all hand-written rather than pulled in from "
+"npm, keeping the bundle small and avoiding exposure to a third-party HTTP"
+" library's own vulnerabilities."
+msgstr ""
+"Obsidian 자체가 제공하는 것(``obsidian`` 패키지) 외에 플러그인에는 런타임 "
+"의존성이 없습니다 — WebDAV 클라이언트, 로그인 흐름, 내부 링크 파싱 모두 npm에서 "
+"가져오지 않고 직접 작성되어, 번들을 작게 유지하고 서드파티 HTTP 라이브러리 "
+"자체의 취약점에 노출되는 것을 피합니다."

@@ -1,0 +1,131 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Ji-Ho Lee
+# This file is distributed under the same license as the harang-nextcloud
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: harang-nextcloud 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-31 06:56+0900\n"
+"PO-Revision-Date: 2026-07-31 00:00+0900\n"
+"Last-Translator: Ji-Ho Lee\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../installation.rst:2 45250ba8fe4243399e8c5a6aacb070bd
+msgid "Installation"
+msgstr "설치"
+
+#: ../../installation.rst:4 634c4b8dd1624fb7bcf3cc371d2bac9c
+msgid "Make sure you have completed the steps in :doc:`prerequisites` first."
+msgstr "먼저 :doc:`prerequisites`\\ 의 절차를 완료했는지 확인하세요."
+
+#: ../../installation.rst:6 29a3082d3bbb48bf8d5d5f5b89bec8bd
+msgid ""
+"**harang-nextcloud** is listed in Obsidian's official Community Plugins "
+"directory, so the recommended way to install it is directly from within "
+"Obsidian."
+msgstr ""
+"**harang-nextcloud**\\ 는 Obsidian 공식 커뮤니티 플러그인 목록에 등록되어 "
+"있으므로, Obsidian 안에서 바로 설치하는 것이 권장되는 방법입니다."
+
+#: ../../installation.rst:11 a52793a727f54994b991dddf52dd7789
+msgid "Method 1 — Community Plugins browser (recommended)"
+msgstr "방법 1 — 커뮤니티 플러그인 찾아보기 (권장)"
+
+#: ../../installation.rst:13 79d90dfd57344ebab666ec4020f201fb
+msgid "Open **Settings → Community plugins** in Obsidian."
+msgstr "Obsidian에서 **설정 → 커뮤니티 플러그인**\\ 을 여세요."
+
+#: ../../installation.rst:14 46e5a38ba97c4a4a9e5f41e782c7e7d3
+msgid "Click **Browse**, then search for **\"Harang Nextcloud\"**."
+msgstr "**찾아보기**\\ 를 클릭한 뒤 **\"Harang Nextcloud\"**\\ 를 검색하세요."
+
+#: ../../installation.rst:15 d54223ad7a8049148fe1b94123888a3f
+msgid "Click **Install**, then **Enable**."
+msgstr "**설치**\\ 를 클릭한 뒤 **활성화**\\ 하세요."
+
+#: ../../installation.rst:17 4deb1a0f86c84c1e994a90be1e6382e6
+msgid ""
+"Obsidian will also notify you of future updates and let you update the "
+"plugin from the same screen."
+msgstr ""
+"이후 업데이트가 있을 때도 Obsidian이 알려주며, 같은 화면에서 플러그인을 "
+"업데이트할 수 있습니다."
+
+#: ../../installation.rst:21 cb120c0b87fb419498f2099d6bb5e618
+msgid "Method 2 — Manual install of pre-built files"
+msgstr "방법 2 — 미리 빌드된 파일로 수동 설치"
+
+#: ../../installation.rst:23 c105557d0c624160882c6c30cc060f20
+msgid ""
+"Use this method if you already have a built copy of the plugin "
+"(``main.js``, ``manifest.json``, ``styles.css``) — for example from a "
+"release archive — and want to install it without going through the "
+"Community Plugins browser."
+msgstr ""
+"이미 빌드된 플러그인 파일(``main.js``, ``manifest.json``, ``styles.css``) — "
+"예를 들어 릴리스 아카이브에서 얻은 파일 — 을 가지고 있고, 커뮤니티 "
+"플러그인 찾아보기를 거치지 않고 설치하고 싶다면 이 방법을 사용하세요."
+
+#: ../../installation.rst:27 4a7be47dac4f4062809cc6396193a12d
+msgid ""
+"In your vault, create the folder ``<vault>/.obsidian/plugins/harang-"
+"nextcloud/`` if it doesn't already exist."
+msgstr "볼트 안에 ``<vault>/.obsidian/plugins/harang-nextcloud/`` 폴더가 없다면 만드세요."
+
+#: ../../installation.rst:30 5b8b95f3ea34423fab6a27c63a2654e6
+msgid "Copy ``main.js``, ``manifest.json``, and ``styles.css`` into that folder."
+msgstr "``main.js``, ``manifest.json``, ``styles.css``\\ 를 그 폴더에 복사하세요."
+
+#: ../../installation.rst:31 56211b4886d24bbaa0a438b8f4f14796
+msgid ""
+"Restart Obsidian, then enable **Harang Nextcloud** under **Settings → "
+"Community plugins**."
+msgstr "Obsidian을 재시작한 뒤 **설정 → 커뮤니티 플러그인**\\ 에서 **Harang Nextcloud**\\ 를 활성화하세요."
+
+#: ../../installation.rst:35 bf55f86f14634c1ab33cbf2e5f853d48
+msgid "Method 3 — Clone the Git repository and build from source"
+msgstr "방법 3 — Git 저장소를 클론해서 소스에서 빌드"
+
+#: ../../installation.rst:37 0f57186fb19744f28b324ea4e1c200d8
+msgid ""
+"Use this method if you want to build from a specific commit or contribute"
+" to the plugin."
+msgstr "특정 커밋에서 빌드하거나 플러그인 개발에 기여하려면 이 방법을 사용하세요."
+
+#: ../../installation.rst:40 206b847b6f224acc88a02603db55270d
+msgid "**Requirements:** `Node.js <https://nodejs.org/>`_ 18 or later."
+msgstr "**요구 사항:** `Node.js <https://nodejs.org/>`_ 18 이상."
+
+#: ../../installation.rst:49 667f7bb859c2439d96c6ee029a3c24ce
+msgid ""
+"This produces ``main.js`` in the project root. Copy it, together with "
+"``manifest.json`` and ``styles.css``, into ``<vault>/.obsidian/plugins"
+"/harang-nextcloud/`` as described in Method 2, then restart Obsidian and "
+"enable the plugin."
+msgstr ""
+"프로젝트 루트에 ``main.js``\\ 가 생성됩니다. 방법 2에서 설명한 대로 이 파일을 ``manifest.json``, "
+"``styles.css``\\ 와 함께 ``<vault>/.obsidian/plugins/harang-nextcloud/``\\ 에"
+" 복사한 뒤 Obsidian을 재시작하고 플러그인을 활성화하세요."
+
+#: ../../installation.rst:56 bd521bae31f946b9b7b33018997d277d
+msgid ""
+"``npm run dev`` starts esbuild in watch mode, rebuilding ``main.js`` on "
+"every source change — useful when iterating on the plugin itself."
+msgstr ""
+"``npm run dev``\\ 는 esbuild를 감시(watch) 모드로 실행해 소스가 바뀔 때마다 ``main.js``\\ 를"
+" 다시 빌드합니다 — 플러그인 자체를 계속 수정할 때 유용합니다."
+
+#: ../../installation.rst:59 4b08989ebe1240dfa45095b06c9cf562
+msgid ""
+"Once installed, continue to :doc:`usage` to connect a Nextcloud server "
+"profile."
+msgstr "설치를 마쳤다면 :doc:`usage`\\ 로 이어서 Nextcloud 서버 프로필을 연결하세요."

@@ -1,0 +1,224 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Ji-Ho Lee
+# This file is distributed under the same license as the harang-nextcloud
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: harang-nextcloud 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-31 00:07+0900\n"
+"PO-Revision-Date: 2026-07-31 00:00+0900\n"
+"Last-Translator: Ji-Ho Lee\n"
+"Language: ko\n"
+"Language-Team: ko <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../usage.rst:2 f0eb28ea913142918db881936b51c856
+msgid "Usage"
+msgstr "사용법"
+
+#: ../../usage.rst:5 1cf0bc6ca2c244d1ac3fb90e3aaeacd4
+msgid "Connecting a Nextcloud server profile"
+msgstr "Nextcloud 서버 프로필 연결하기"
+
+#: ../../usage.rst:7 8a1d1905eea244b6b075d9b2652d5c25
+msgid "Open **Settings → Harang Nextcloud**."
+msgstr "**설정 → Harang Nextcloud**\\ 를 여세요."
+
+#: ../../usage.rst:8 80beac66b676435ea3bca8bcedcb6267
+msgid "Under **Add new profile**, fill in:"
+msgstr "**새 프로필 추가**\\ 에서 다음을 입력하세요:"
+
+#: ../../usage.rst:13 eddd076d750b45739d967cfea209db10
+msgid "Field"
+msgstr "필드"
+
+#: ../../usage.rst:14 9d1f412017784fa5918bb5961399c5c4
+msgid "Description"
+msgstr "설명"
+
+#: ../../usage.rst:15 33ec9fffe0124a4d8d9f4a6496781919
+msgid "Profile name"
+msgstr "프로필 이름"
+
+#: ../../usage.rst:16 6f9638e0690045689db9a6d83b614be3
+msgid ""
+"A label for this account, e.g. ``Work`` or ``Personal``. Used to tell "
+"multiple Nextcloud accounts apart, and as the folder-picking prefix "
+"described below."
+msgstr ""
+"이 계정을 나타내는 이름입니다. 예: ``Work``, ``Personal``. 여러 Nextcloud "
+"계정을 구분하는 데 쓰이며, 아래에서 설명할 폴더 선택 접두어로도 사용됩니다."
+
+#: ../../usage.rst:19 f21d42e6174f4b3cb6bd21ab97149f49
+msgid "Server URL"
+msgstr "서버 URL"
+
+#: ../../usage.rst:20 6d1de1e2545b40ae9b3ba7e8fb2b9585
+msgid ""
+"The base URL of your Nextcloud instance, e.g. "
+"``https://cloud.example.com``."
+msgstr "Nextcloud 인스턴스의 기본 URL. 예: ``https://cloud.example.com``."
+
+#: ../../usage.rst:23 23a3447c19b1440cb9755e774633d156
+msgid ""
+"Click **Log in to connect**. Your browser opens the Nextcloud login page;"
+" sign in and approve the connection there."
+msgstr ""
+"**로그인하여 연결**\\ 을 클릭하세요. 브라우저에서 Nextcloud 로그인 페이지가 "
+"열리면 그곳에서 로그인하고 연결을 승인하세요."
+
+#: ../../usage.rst:25 d1c69213fdff4324bf176b0cf83454e0
+msgid ""
+"Back in Obsidian, once the login flow completes you'll see a **Nextcloud "
+"connection complete** notice, and the profile appears in the list with "
+"its server URL and account name."
+msgstr ""
+"Obsidian으로 돌아오면 로그인 절차가 완료됐을 때 **Nextcloud connection "
+"complete** 알림이 표시되고, 목록에 서버 URL과 계정명이 함께 표시된 프로필이 "
+"나타납니다."
+
+#: ../../usage.rst:29 cfcc133a0416438aa195f046c51cd621
+msgid ""
+"You can add as many profiles as you have Nextcloud accounts. Each profile"
+" row also has **Reconnect** (re-runs the login flow if the app password "
+"stops working) and a delete button."
+msgstr ""
+"가지고 있는 Nextcloud 계정 수만큼 프로필을 추가할 수 있습니다. 각 프로필 "
+"항목에는 앱 비밀번호가 더 이상 작동하지 않을 때 로그인 절차를 다시 실행하는 "
+"**다시 연결** 버튼과 삭제 버튼도 있습니다."
+
+#: ../../usage.rst:35 07fd939d3fe64c9cabd7df7fb4ddd424
+msgid ""
+"The plugin never asks for or stores your Nextcloud account password "
+"directly — it obtains an app password through Nextcloud's own Login Flow "
+"v2 handshake, the same mechanism used by the official desktop and mobile "
+"Nextcloud clients."
+msgstr ""
+"이 플러그인은 Nextcloud 계정 비밀번호를 직접 묻거나 저장하지 않습니다 — "
+"Nextcloud 공식 데스크톱/모바일 클라이언트와 동일한 방식인 Login Flow v2 "
+"핸드셰이크를 통해 앱 비밀번호를 발급받습니다."
+
+#: ../../usage.rst:41 83515628ff484f469dcf272f4402731a
+msgid "Pasting a Nextcloud link"
+msgstr "Nextcloud 링크 붙여넣기"
+
+#: ../../usage.rst:43 4c999836f3944efbb6643e249d02c721
+msgid ""
+"Copy an internal link from Nextcloud's web UI (**Details → Copy internal "
+"link**, or the \"Copy internal link\" action on a file) — it looks like:"
+msgstr ""
+"Nextcloud 웹 UI에서 내부 링크를 복사하세요(**세부 정보 → 내부 링크 복사**, "
+"또는 파일의 \"내부 링크 복사\" 액션). 다음과 같은 형태입니다:"
+
+#: ../../usage.rst:50 6423e26a8e7049dcb373930496cf4f5c
+msgid "Paste it into a note. The plugin recognizes the link, replaces it with:"
+msgstr "노트에 붙여넣으면 플러그인이 링크를 인식해 다음으로 바꿉니다:"
+
+#: ../../usage.rst:58 0ee8bfb3a5df4076a912ac7cd7c70d0f
+msgid "and renders that code block as a card showing:"
+msgstr "그리고 그 코드 블록을 다음을 보여주는 카드로 렌더링합니다:"
+
+#: ../../usage.rst:60 f9d6c23085fe450997c063f87ebd4218
+msgid "A 📁/📄 icon for folders vs. files."
+msgstr "폴더/파일을 구분하는 📁/📄 아이콘."
+
+#: ../../usage.rst:61 ec1c41a14156405db6bddf7a383e0745
+msgid "The file's name and full path."
+msgstr "파일의 이름과 전체 경로."
+
+#: ../../usage.rst:62 764033df882b46e0961d8c9001c8c4e3
+msgid ""
+"Its size and date (labeled **Created** or **Modified**, whichever the "
+"server actually reports — see :doc:`architecture`), plus the profile name"
+" it resolved against."
+msgstr ""
+"파일 크기와 날짜(서버가 실제로 제공하는 값에 따라 **생성일** 또는 **수정일**\\ 로 "
+"표시됩니다 — :doc:`architecture` 참고), 그리고 매칭된 프로필 이름."
+
+#: ../../usage.rst:65 11985f0eb1344731ba124f2cc32d2fc2
+msgid "An **Open in browser** button that opens the original internal link."
+msgstr "원본 내부 링크를 여는 **브라우저에서 열기** 버튼."
+
+#: ../../usage.rst:67 6d0300ad8174470998e72ef997005171
+msgid ""
+"If no connected profile's server matches the link, the block shows an "
+"error instead (\"No Nextcloud profile matches this link. Add one in "
+"settings.\") — add or reconnect the matching profile and re-render the "
+"note to fix it."
+msgstr ""
+"연결된 프로필 중 어느 서버도 링크와 일치하지 않으면 블록에 대신 오류가 "
+"표시됩니다(\"No Nextcloud profile matches this link. Add one in "
+"settings.\") — 일치하는 프로필을 추가하거나 다시 연결한 뒤 노트를 다시 "
+"렌더링하면 해결됩니다."
+
+#: ../../usage.rst:72 62212dd70d0e4151a94d866810ae75e6
+msgid ""
+"You can also select existing text and run **Convert selected Nextcloud "
+"internal link to a file block** from the command palette to turn it into "
+"the same block, instead of pasting."
+msgstr ""
+"붙여넣는 대신, 기존 텍스트를 선택하고 명령 팔레트에서 **Convert selected "
+"Nextcloud internal link to a file block**\\ 을 실행해 같은 블록으로 바꿀 수도 "
+"있습니다."
+
+#: ../../usage.rst:77 233fb2a085e44fbe95244a9001f20450
+msgid "Uploading attachments straight into a note"
+msgstr "노트에 첨부 파일 바로 업로드하기"
+
+#: ../../usage.rst:79 8a9ca013cb4147f7913de40f782740b2
+msgid ""
+"Add an ``nc-folder`` frontmatter property to a note to make it an upload "
+"target:"
+msgstr "노트를 업로드 대상으로 만들려면 ``nc-folder`` 프런트매터 속성을 추가하세요:"
+
+#: ../../usage.rst:88 387f9eb9f9e44808b1334a45136bf36e
+msgid ""
+"The value is ``<profileName>/<path>`` — the path is relative to that "
+"profile's Nextcloud files root, and is created automatically if it "
+"doesn't exist yet. If you only have one profile registered, you can omit "
+"the profile name and just give the path."
+msgstr ""
+"값의 형식은 ``<프로필이름>/<경로>``\\ 입니다 — 경로는 해당 프로필의 Nextcloud "
+"파일 루트를 기준으로 하며, 아직 없다면 자동으로 만들어집니다. 프로필이 "
+"하나만 등록되어 있다면 프로필 이름을 생략하고 경로만 적어도 됩니다."
+
+#: ../../usage.rst:93 87bb811180fe4041a1c120c8fbb50dcc
+msgid ""
+"With that property set, pasting one or more non-image files (images still"
+" paste as normal Obsidian attachments) uploads each file to that folder "
+"and inserts a ``nextcloud-file`` block for it — the same block you'd get "
+"from pasting an internal link. If a file with the same name already "
+"exists in the target folder, an available name is chosen automatically "
+"(``report (1).pdf``, ``report (2).pdf``, ...)."
+msgstr ""
+"이 속성이 설정된 상태에서 이미지가 아닌 파일을 하나 이상 붙여넣으면(이미지는 "
+"여전히 일반 Obsidian 첨부 파일로 붙여넣어집니다) 각 파일이 해당 폴더로 "
+"업로드되고 ``nextcloud-file`` 블록이 삽입됩니다 — 내부 링크를 붙여넣었을 때와 "
+"동일한 블록입니다. 대상 폴더에 같은 이름의 파일이 이미 있으면 사용 가능한 "
+"이름이 자동으로 선택됩니다(``report (1).pdf``, ``report (2).pdf`` 등)."
+
+#: ../../usage.rst:101 9bef2fe123db40d880447f32da850ca1
+msgid "Removing an attachment link"
+msgstr "첨부 링크 제거하기"
+
+#: ../../usage.rst:103 67b66441fae54ae1bdb60535777590a3
+msgid ""
+"If you delete a ``nextcloud-file`` block from a note (or delete the note "
+"itself) while Obsidian is open, the plugin asks whether the underlying "
+"file should also be moved to the Nextcloud trash, or kept as-is. This "
+"only applies to notes Obsidian has actually seen open or modified during "
+"the current session — see :doc:`architecture` for the exact tracking "
+"behavior."
+msgstr ""
+"Obsidian이 열려 있는 동안 노트에서 ``nextcloud-file`` 블록을 삭제하거나(또는 "
+"노트 자체를 삭제하면) 실제 파일도 Nextcloud 휴지통으로 옮길지, 그대로 둘지 "
+"플러그인이 물어봅니다. 이는 현재 세션 동안 Obsidian이 실제로 열거나 수정한 "
+"노트에 대해서만 적용됩니다 — 정확한 추적 동작은 :doc:`architecture`\\ 를 "
+"참고하세요."

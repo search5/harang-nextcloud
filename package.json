@@ -1,0 +1,26 @@
+{
+	"name": "harang-nextcloud",
+	"version": "0.0.1",
+	"description": "Paste Nextcloud internal links into Obsidian and render them as rich file blocks.",
+	"main": "main.js",
+	"scripts": {
+		"dev": "node esbuild.config.mjs",
+		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
+		"lint": "eslint .",
+		"version": "node version-bump.mjs && git add manifest.json versions.json"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "MIT",
+	"devDependencies": {
+		"@eslint/js": "^10.0.1",
+		"@types/node": "^20.11.5",
+		"esbuild": "0.19.11",
+		"eslint": "^10.8.0",
+		"eslint-plugin-obsidianmd": "^0.4.1",
+		"obsidian": "latest",
+		"tslib": "2.6.2",
+		"typescript": "5.3.3",
+		"typescript-eslint": "^8.65.0"
+	}
+}
