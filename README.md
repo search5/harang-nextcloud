@@ -20,7 +20,7 @@ Paste a Nextcloud internal link (e.g. `https://cloud.example.com/f/12345`) into 
 ## Prerequisites
 
 - A Nextcloud instance reachable over HTTP(S) that supports the standard Login Flow v2 handshake (built into any reasonably current Nextcloud server).
-- Obsidian 1.12.7 or later.
+- Obsidian 1.13.4 or later.
 
 See the [Prerequisites](https://search5.github.io/harang-nextcloud/en/prerequisites.html) page for details.
 

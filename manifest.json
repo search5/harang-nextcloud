@@ -1,8 +1,8 @@
 {
 	"id": "harang-nextcloud",
 	"name": "Harang Nextcloud",
-	"version": "0.0.2",
-	"minAppVersion": "1.12.7",
+	"version": "0.0.3",
+	"minAppVersion": "1.13.4",
 	"description": "Paste Nextcloud internal links to render rich file blocks with size, upload date, and a one-click shortcut to open the file in your browser.",
 	"author": "Ji-ho Les",
 	"authorUrl": "https://www.flask.moe",

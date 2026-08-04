@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: harang-nextcloud 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-31 00:07+0900\n"
+"POT-Creation-Date: 2026-08-01 17:01+0900\n"
 "PO-Revision-Date: 2026-07-31 00:00+0900\n"
 "Last-Translator: Ji-Ho Lee\n"
 "Language: ko\n"
@@ -19,19 +19,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: ../../prerequisites.rst:2 498cb78bb8ea40ce80051c3ff1014b05
+#: ../../prerequisites.rst:2 6e9d42f628dd4a98a31a9548d5fce517
 msgid "Prerequisites"
 msgstr "사전 준비 사항"
 
-#: ../../prerequisites.rst:4 eaffdb166c95497c98e6cdec5a636083
+#: ../../prerequisites.rst:4 e7217f15af01402daf6cff33a95dbb91
 msgid "Before using **harang-nextcloud**, make sure the following are in place."
 msgstr "**harang-nextcloud**\\ 를 사용하기 전에 다음 사항을 준비해 주세요."
 
-#: ../../prerequisites.rst:7 43c405652d83430db844e7820d04c7a5
+#: ../../prerequisites.rst:7 cedd756e911e4de9b2ba9707d182a939
 msgid "1. A reachable Nextcloud server"
 msgstr "1. 접속 가능한 Nextcloud 서버"
 
-#: ../../prerequisites.rst:9 28567c6545c046b59cdd6cdd50296622
+#: ../../prerequisites.rst:9 a029371f62194b75b059ab346bed668f
 msgid ""
 "You need a Nextcloud instance reachable over HTTP(S) that supports the "
 "standard `Login Flow v2 "
@@ -43,55 +43,54 @@ msgid ""
 msgstr ""
 "표준 `Login Flow v2 "
 "<https://docs.nextcloud.com/server/latest/developer_manual/client_apis/LoginFlow/index.html>`_"
-" 핸드셰이크(``POST /index.php/login/v2``)를 지원하는, HTTP(S)로 접속 가능한 "
-"Nextcloud 인스턴스가 필요합니다 — 이는 Nextcloud 자체에 내장된 기능이므로 "
-"어지간히 최신 서버라면 별도 설정 없이 바로 사용할 수 있습니다. 이 플러그인은 "
-"이 로그인 흐름을 통해 발급받은 앱 비밀번호로 인증하며, 실제 계정 비밀번호는 "
-"묻거나 저장하지 않습니다."
+" 핸드셰이크(``POST /index.php/login/v2``)를 지원하는, HTTP(S)로 접속 가능한 Nextcloud "
+"인스턴스가 필요합니다 — 이는 Nextcloud 자체에 내장된 기능이므로 어지간히 최신 서버라면 별도 설정 없이 바로 사용할 수 "
+"있습니다. 이 플러그인은 이 로그인 흐름을 통해 발급받은 앱 비밀번호로 인증하며, 실제 계정 비밀번호는 묻거나 저장하지 않습니다."
 
-#: ../../prerequisites.rst:16 2a08db8471d94186a4e3ae7d3f2921f1
+#: ../../prerequisites.rst:16 d0a8fd52732247f194593a82cc0879b7
 msgid "You will need:"
 msgstr "다음이 필요합니다:"
 
-#: ../../prerequisites.rst:21 51b00817ac784c3c8c3dadd51d3d9195
+#: ../../prerequisites.rst:21 26447df991c0490d8f9a4c82c4f15bd9
 msgid "Item"
 msgstr "항목"
 
-#: ../../prerequisites.rst:22 03bdf428cea243f4ba44647f474f1dfd
+#: ../../prerequisites.rst:22 1e3052ed56d44edfb7b22dcd040a6404
 msgid "Notes"
 msgstr "설명"
 
-#: ../../prerequisites.rst:23 5b6024cc5cef4a0bad4433cf93d6efa1
+#: ../../prerequisites.rst:23 f080dc79a74b4f5e94cb0885d83b695c
 msgid "Server URL"
 msgstr "서버 URL"
 
-#: ../../prerequisites.rst:24 beeebd4e385b4a8b8e748e424d24d358
+#: ../../prerequisites.rst:24 deca452bfe034540b65f291b415e0bfc
 msgid ""
 "The base URL of your Nextcloud instance, e.g. "
 "``https://cloud.example.com``."
 msgstr "Nextcloud 인스턴스의 기본 URL. 예: ``https://cloud.example.com``."
 
-#: ../../prerequisites.rst:26 b5b30b5cc4a54d21b4b17fab2564b604
+#: ../../prerequisites.rst:26 a6f934696dc54eae9595ddb3606fd509
 msgid "A way to finish login in a browser"
 msgstr "브라우저에서 로그인을 마칠 수 있는 환경"
 
-#: ../../prerequisites.rst:27 ed84faa8dae847f8b1d5779ffe6b5cd2
+#: ../../prerequisites.rst:27 8cb053247bb946e08a9d364895bd1efc
 msgid ""
 "The login flow opens your Nextcloud login page in your default browser; "
 "you approve the app connection there, and the credentials are sent back "
 "to Obsidian automatically."
 msgstr ""
-"로그인 흐름은 기본 브라우저에서 Nextcloud 로그인 페이지를 엽니다. 그곳에서 "
-"앱 연결을 승인하면 자격 증명이 자동으로 Obsidian에 전달됩니다."
+"로그인 흐름은 기본 브라우저에서 Nextcloud 로그인 페이지를 엽니다. 그곳에서 앱 연결을 승인하면 자격 증명이 자동으로 "
+"Obsidian에 전달됩니다."
 
-#: ../../prerequisites.rst:32 e2835753b7984edbad61e58333964546
-msgid "2. Obsidian 1.12.7 or later"
-msgstr "2. Obsidian 1.12.7 이상"
+#: ../../prerequisites.rst:32 d305e282804f42c98b5d67602821ad4a
+msgid "2. Obsidian 1.13.4 or later"
+msgstr "2. Obsidian 1.13.4 이상"
 
-#: ../../prerequisites.rst:34 d460bbbd004c48c0b4857289e43670e4
+#: ../../prerequisites.rst:34 40305115c18541e59488bf2f3dbadbf9
 msgid "This is the plugin's declared minimum supported Obsidian version."
 msgstr "플러그인이 명시한 최소 지원 Obsidian 버전입니다."
 
-#: ../../prerequisites.rst:36 e6dcd221f1574611b5f5054bbdc51a20
+#: ../../prerequisites.rst:36 7107cd4db28d4f78bb3d86ac3e8f3876
 msgid "Once both are in place, continue to :doc:`installation`."
 msgstr "두 가지가 모두 준비되었다면 :doc:`installation`\\ 으로 이어서 진행하세요."
+

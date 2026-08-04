@@ -20,7 +20,7 @@ Nextcloud 내부 링크(예: `https://cloud.example.com/f/12345`)를 노트에 �
 ## 사전 요구 사항
 
 - 표준 Login Flow v2 핸드셰이크를 지원하는, HTTP(S)로 접속 가능한 Nextcloud 인스턴스(어지간히 최신 Nextcloud 서버라면 기본 내장).
-- Obsidian 1.12.7 이상.
+- Obsidian 1.13.4 이상.
 
 자세한 내용은 [사전 준비 사항](https://search5.github.io/harang-nextcloud/ko/prerequisites.html) 페이지를 참고하세요.
 

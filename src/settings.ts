@@ -1,4 +1,5 @@
-import { App, Notice, PluginSettingTab, Setting } from "obsidian";
+import { App, Notice, PluginSettingTab } from "obsidian";
+import type { Setting, SettingDefinitionItem, SettingGroupItem } from "obsidian";
 import type HarangNextcloudPlugin from "./main";
 import { NextcloudProfile } from "./types";
 import {
@@ -28,82 +29,94 @@ export class HarangNextcloudSettingTab extends PluginSettingTab {
 		this.plugin = plugin;
 	}
 
-	display(): void {
-		const { containerEl } = this;
-		containerEl.empty();
+	getSettingDefinitions(): SettingDefinitionItem[] {
+		const profiles = this.plugin.settings.profiles;
 
-		new Setting(containerEl).setName(t("settings.heading")).setHeading();
-		containerEl.createEl("p", {
-			text: t("settings.description"),
-			cls: "setting-item-description",
-		});
-
-		if (this.plugin.settings.profiles.length === 0) {
-			containerEl.createEl("p", {
-				text: t("settings.noProfiles"),
-				cls: "setting-item-description",
+		const profileItems: SettingGroupItem[] = [];
+		if (profiles.length === 0) {
+			profileItems.push({ name: "", desc: t("settings.noProfiles") });
+		}
+		for (const profile of profiles) {
+			profileItems.push({
+				name: profile.name,
+				desc: `${profile.serverUrl} · ${profile.loginName}`,
+				render: (setting) => {
+					this.renderProfile(setting, profile);
+				},
 			});
 		}
 
-		for (const profile of this.plugin.settings.profiles) {
-			this.renderProfile(containerEl, profile);
-		}
-
-		new Setting(containerEl).setName(t("settings.addProfileHeading")).setHeading();
-
 		const isConnectingNew = this.connecting !== null && this.connecting.profileId === null;
 
-		new Setting(containerEl)
-			.setName(t("settings.profileNameLabel"))
-			.setDesc(t("settings.profileNameDesc"))
-			.addText((text) =>
-				text
-					.setPlaceholder(t("settings.profileNamePlaceholder"))
-					.setValue(this.newProfileName)
-					.setDisabled(isConnectingNew)
-					.onChange((value) => (this.newProfileName = value))
-			);
-
-		new Setting(containerEl)
-			.setName(t("settings.serverUrlLabel"))
-			.setDesc(t("settings.serverUrlDesc"))
-			.addText((text) =>
-				text
-					.setPlaceholder("https://cloud.example.com")
-					.setValue(this.newProfileServerUrl)
-					.setDisabled(isConnectingNew)
-					.onChange((value) => (this.newProfileServerUrl = value))
-			);
-
-		new Setting(containerEl).addButton((button) => {
-			if (isConnectingNew) {
-				button
-					.setButtonText(t("settings.cancelConnect"))
-					.setWarning()
-					.onClick(() => {
-						if (this.connecting) this.connecting.cancelled = true;
-					});
-			} else {
-				button
-					.setButtonText(t("settings.connectButton"))
-					.setCta()
-					.onClick(() => this.startNewProfileConnection());
-			}
-		});
+		return [
+			{
+				type: "group",
+				heading: t("settings.heading"),
+				items: [{ name: "", desc: t("settings.description") }, ...profileItems],
+			},
+			{
+				type: "group",
+				heading: t("settings.addProfileHeading"),
+				items: [
+					{
+						name: t("settings.profileNameLabel"),
+						desc: t("settings.profileNameDesc"),
+						render: (setting) => {
+							setting.addText((text) =>
+								text
+									.setPlaceholder(t("settings.profileNamePlaceholder"))
+									.setValue(this.newProfileName)
+									.setDisabled(isConnectingNew)
+									.onChange((value) => (this.newProfileName = value))
+							);
+						},
+					},
+					{
+						name: t("settings.serverUrlLabel"),
+						desc: t("settings.serverUrlDesc"),
+						render: (setting) => {
+							setting.addText((text) =>
+								text
+									.setPlaceholder("https://cloud.example.com")
+									.setValue(this.newProfileServerUrl)
+									.setDisabled(isConnectingNew)
+									.onChange((value) => (this.newProfileServerUrl = value))
+							);
+						},
+					},
+					{
+						name: "",
+						render: (setting) => {
+							setting.addButton((button) => {
+								if (isConnectingNew) {
+									button
+										.setButtonText(t("settings.cancelConnect"))
+										.setDestructive()
+										.onClick(() => {
+											if (this.connecting) this.connecting.cancelled = true;
+										});
+								} else {
+									button
+										.setButtonText(t("settings.connectButton"))
+										.setCta()
+										.onClick(() => this.startNewProfileConnection());
+								}
+							});
+						},
+					},
+				],
+			},
+		];
 	}
 
-	private renderProfile(containerEl: HTMLElement, profile: NextcloudProfile): void {
+	private renderProfile(setting: Setting, profile: NextcloudProfile): void {
 		const isConnecting = this.connecting !== null && this.connecting.profileId === profile.id;
-
-		const setting = new Setting(containerEl)
-			.setName(profile.name)
-			.setDesc(`${profile.serverUrl} · ${profile.loginName}`);
 
 		if (isConnecting) {
 			setting.addButton((button) =>
 				button
 					.setButtonText(t("settings.cancelConnect"))
-					.setWarning()
+					.setDestructive()
 					.onClick(() => {
 						if (this.connecting) this.connecting.cancelled = true;
 					})
@@ -118,14 +131,14 @@ export class HarangNextcloudSettingTab extends PluginSettingTab {
 			button
 				.setIcon("trash")
 				.setTooltip(t("settings.deleteProfileTooltip"))
-				.setWarning()
+				.setDestructive()
 				.onClick(async () => {
 					this.plugin.settings.profiles = this.plugin.settings.profiles.filter(
 						(p) => p.id !== profile.id
 					);
 					this.app.secretStorage.setSecret(nextcloudAppPasswordSecretId(profile.id), "");
 					await this.plugin.saveSettings();
-					this.display();
+					this.update();
 				})
 		);
 	}
@@ -180,7 +193,7 @@ export class HarangNextcloudSettingTab extends PluginSettingTab {
 		profileId: string | null = null
 	): Promise<void> {
 		this.connecting = { profileId, cancelled: false };
-		this.display();
+		this.update();
 
 		try {
 			const init = await initiateLoginFlow(serverUrl);
@@ -201,7 +214,7 @@ export class HarangNextcloudSettingTab extends PluginSettingTab {
 			}
 		} finally {
 			this.connecting = null;
-			this.display();
+			this.update();
 		}
 	}
 }

@@ -28,7 +28,7 @@ You will need:
        browser; you approve the app connection there, and the credentials
        are sent back to Obsidian automatically.
 
-2. Obsidian 1.12.7 or later
+2. Obsidian 1.13.4 or later
 ------------------------------
 
 This is the plugin's declared minimum supported Obsidian version.
